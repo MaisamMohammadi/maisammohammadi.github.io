@@ -182,14 +182,14 @@ button{
         border-radius: 1vw;
     }
         .mnormal{
-            width: 15vw;
-            height: 15vw;
+            width: 20vw;
+            height: 20vw;
             margin: 0.6vw;
             border-radius: 0.6vw;
         }
         .mhard{
-            width: 10vw;
-            height: 10vw;
+            width: 13vw;
+            height: 13vw;
             margin: 0.4vw;
             border-radius: 0.4vw;
         }
@@ -207,7 +207,7 @@ button{
 
 }
 
-@media screen and (max-width: 360px)
+@media screen and (max-width: 375px)
 {
     button{
         font-size: 11px;
