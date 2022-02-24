@@ -70,7 +70,7 @@ function creating(i, count)
 
     const imgback = document.createElement('img');
     imgback.className = 'imgback';
-    imgback.src = './gifs/back.gif';
+    imgback.src = './gifs/Back.gif';
     div.appendChild(imgback);
     
     
