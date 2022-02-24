@@ -24,7 +24,7 @@ function createcards (count)
 
     let rowCount = Math.sqrt(count);
 
-    for(let i = 0; i < halfCount; i++) // Die Karten in der Reihe einstellen. 
+    for(let i = 1; i <= halfCount; i++) // Die Karten in der Reihe einstellen. 
     {
         // Karte in HTML als div erstellen. 
         const div = creating(i, rowCount);
@@ -44,6 +44,16 @@ function createcards (count)
         let row = document.createElement('div');
         row.className = 'row';
         row = gamefield.appendChild(row);
+
+        /*if(rowCount == 4)
+        {
+            row.style.height = "20%";
+        }
+
+        else if(rowCount == 6)
+        {
+            row.style.height = "15%";
+        }*/
 
         for(let i = 0; i < rowCount; i++)
         {
@@ -65,38 +75,30 @@ function creating(i, count)
 
     const imgfront = document.createElement('img');
     imgfront.className = 'imgfront';
-    imgfront.src = images[i];
+    imgfront.src = `./gifs/${i}.gif`;
     div.appendChild(imgfront);
 
     const imgback = document.createElement('img');
     imgback.className = 'imgback';
-    imgback.src = './images/Forderseite.png';
+    imgback.src = './gifs/back.gif';
     div.appendChild(imgback);
     
     
 
     if(count == 4)
     {
-        div.style.width = "120px";
-        div.style.height = "120px";
+        div.classList.add("mnormal");
 
-        imgfront.style.width = "90px";
-        imgback.style.width = "90px";
-                
-        imgfront.style.height = "90px";
-        imgback.style.height = "90px";
+        imgback.classList.add("imgnormal");
+        imgfront.classList.add("imgnormal");
     }
 
     else if(count == 6)
     {
-        div.style.width = "90px";
-        div.style.height = "90px";
+        div.classList.add("mhard");
 
-        imgfront.style.width = "70px";
-        imgback.style.width = "70px";
-                
-        imgfront.style.height = "70px";
-        imgback.style.height = "70px";
+        imgback.classList.add("imghard");
+        imgfront.classList.add("imghard");
     }
 
     return div;

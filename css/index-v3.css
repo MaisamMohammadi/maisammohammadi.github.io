@@ -1,0 +1,216 @@
+
+:root{
+    --dunkelblau: #0090FF;
+    --hellblau: #00E6FF;
+    --dunkelgelb: #FFFF00;
+    --hellgelb: #FFF93C;
+    --lang : 20vw;
+}
+
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    font-size: 2vh;
+}
+
+body{
+    height: 100vh;
+    background-color: var(--dunkelblau);
+    
+}
+
+.menu{
+    height: 6vh;
+    background-color: var(--hellblau);
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    align-content: space-around;
+    align-items: center;
+    justify-content: space-around;
+    
+}
+
+    #first{
+        background-color: var(--hellblau);
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+    }
+    #first *{
+        margin-right: 1vw;
+        margin-left: 1vw;
+    }
+
+    #second{
+        background-color: var(--hellblau);
+        display: flex;
+        align-items: flex-start;
+    }
+    #second * {
+        margin-right: 1vw;
+        margin-left: 1vw;
+    }
+
+button{
+    font-size: 2vh;
+    border-color: var(--dunkelgelb);
+    width: 7vw;
+    height: auto;
+    background-color: var(--dunkelgelb);
+    right: 200px;
+    align-items: center;
+    display: inline-block;
+    border-radius: 1vh;
+}
+
+.menu p{
+    margin: auto;
+    display: inline-block;
+}
+
+.field{
+    height: 88vh;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    align-content: center;
+}
+
+.row {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.mem{
+    width: 20vh;
+    height: 20vh;
+    margin: 1vh;
+    border-radius: 1vh;
+    background-color: yellow;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    transform: scale(1);
+    transform-style: preserve-3d;
+    transition: transform .5s;
+}
+    .mnormal{
+        width: 15vh;
+        height: 15vh;
+        margin: 0.6vh;
+        border-radius: 0.6vh;
+    }
+    .mhard{
+        width: 10vh;
+        height: 10vh;
+        margin: 0.4vh;
+        border-radius: 0.4vh;
+    }
+
+.mem:active {
+    transform: scale(0.97);
+    transition: transform .2s;
+}
+
+.imgfront, .imgback {
+    width: 80%;
+    height: 80%;
+    position: absolute;
+    backface-visibility: hidden;
+    border-radius: 1vh;
+}
+    .imgnormal{
+        border-radius: 0.6vh;
+    }
+    .imghard{
+        border-radius: 0.4vh;
+    }
+
+ .imgfront{
+    transform: rotateY(180deg);
+}
+
+
+
+.flip {
+    transform: rotateY(180deg);
+}
+
+.footer {
+    color: black;
+    left: 0;
+    bottom: 0;
+    height: 6vh;
+    background-color: var(--hellblau);
+    display: flex;
+    justify-content:space-around ;
+    align-items: center;
+}
+
+@media screen and (max-width: 800px)
+{
+    button{
+        width: 56.1px;
+    }
+}
+
+@media screen and (max-width: 565px)
+{
+    .menu{
+        height: 10vh;
+    }
+    
+    .field{
+        height: 84vh;
+    }
+        
+    button{
+        font-size: 13px;
+        height: 20px;
+    }
+
+    .mem{
+        width: 20vw;
+        height: 20vw;
+        margin: 1vw;
+        border-radius: 1vw;
+    }
+        .mnormal{
+            width: 15vw;
+            height: 15vw;
+            margin: 0.6vw;
+            border-radius: 0.6vw;
+        }
+        .mhard{
+            width: 10vw;
+            height: 10vw;
+            margin: 0.4vw;
+            border-radius: 0.4vw;
+        }
+    
+    .imgfront, .imgback {
+        border-radius: 1vw;
+    }  
+        .imgnormal{
+            border-radius: 0.6vw;
+        }
+        .imghard{
+            border-radius: 0.4vw;
+        }
+
+
+}
+
+@media screen and (max-width: 360px)
+{
+    button{
+        font-size: 11px;
+        width: 50px;
+    }
+}

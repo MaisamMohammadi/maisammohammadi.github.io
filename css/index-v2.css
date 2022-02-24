@@ -82,8 +82,8 @@ button{
 }
 
 .mem{
-    width: 150px;
-    height: 150px;
+    width: 20vh;
+    height: 20vh;
     margin: 10px;
     border-radius: 10px;
     background-color: yellow;
@@ -102,9 +102,10 @@ button{
 }
 
 .imgfront, .imgback {
-    width: 100px;
+    width: 80%;
     position: absolute;
     backface-visibility: hidden;
+    border-radius: 1vh;
 }
 
  .imgfront{
