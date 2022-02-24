@@ -45,16 +45,6 @@ function createcards (count)
         row.className = 'row';
         row = gamefield.appendChild(row);
 
-        /*if(rowCount == 4)
-        {
-            row.style.height = "20%";
-        }
-
-        else if(rowCount == 6)
-        {
-            row.style.height = "15%";
-        }*/
-
         for(let i = 0; i < rowCount; i++)
         {
             let a = cards[index];
